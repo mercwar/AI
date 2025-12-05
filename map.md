@@ -1,0 +1,21 @@
+# MAP (8–10MB Bundles)
+
+- bundle_0001.md : 10485760 bytes
+- bundle_0002.md : 10485760 bytes
+- bundle_0003.md : 10485760 bytes
+- bundle_0004.md : 10485760 bytes
+- bundle_0005.md : 10485760 bytes
+- bundle_0006.md : 10485760 bytes
+- bundle_0007.md : 10485760 bytes
+- bundle_0008.md : 10291546 bytes
+- bundle_0009.md : 10128904 bytes
+- bundle_0010.md : 10485760 bytes
+- bundle_0011.md : 4285955 bytes
+- bundle_0012.md : 7979338 bytes
+- bundle_0013.md : 10485760 bytes
+- bundle_0014.md : 4285962 bytes
+- bundle_0015.md : 9438612 bytes
+- bundle_0016.md : 9408843 bytes
+- bundle_0017.md : 10482326 bytes
+- bundle_0018.md : 10482318 bytes
+- bundle_0019.md : 5294913 bytes
