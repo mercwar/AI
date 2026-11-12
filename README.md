@@ -22,6 +22,7 @@
 ###### 💥 **Mercwar AVIS** (Autonomous Visual Information Seeking) and **NEXUS v3** provide an "AI-first" architecture.
 - For building large multi-file software projects inside standard web AI chat windows.
 - Access (Gemini, ChatGPT, Claude) without hitting token limits or losing track of file connections.
+- Use with Mercwar Avis project [MK-SCAN](https://github.com/mercwar/AVIS-AI-INI-DIR-MK-SCAN) and [PROJECT-EXPLORER](https://github.com/mercwar/CYBORG-PROJECT-EXPLORER)
 
 <div style="text-align: center; margin-bottom: 24px;">
     <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
