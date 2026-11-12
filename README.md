@@ -147,7 +147,7 @@ To make new starter blueprints appear in the Studio's server dropdown:
 
 ## 6. AVIS-DATALAKE Integration
 
-Click **Save this ref in the AVIS-DATALAKE** in Step 3 of the Studio to open the **AVIS-DATALAKE** portal (`https://iblogger.com`) in a dedicated popup window where you can store and share your `.ref` header registries.
+Click **Save this ref in the AVIS-DATALAKE** in Step 3 of the Studio to open the **AVIS-DATALAKE** portal (`https://cron.iblogger.com/AVIS-DATALAKE`) in a dedicated popup window where you can store and share your `.ref` header registries in datalake records.
 <footer style="margin-top: 32px; padding: 12px 18px; border-radius: 6px; background: rgba(10, 12, 18, 0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); color: #94a3b8; font-family: system-ui, -apple-system, sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.03em; line-height: 1.5;">
 
 #
