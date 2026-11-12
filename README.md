@@ -85,6 +85,8 @@ python -m http.server 8080
 
 # Or using Node.js
 npx serve .
+
+or from Apache
 ```
 Then open **`http://localhost:8080`** in your browser.
 
@@ -101,6 +103,7 @@ Upload the repository files directly to **GitHub Pages**, **Netlify**, **Cloudfl
 2. **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the server dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
 3. **Copy & Paste into AI Chat (Step 3):** Click **Copy Setup Script to Clipboard**, open a brand-new chat window in Gemini, ChatGPT, or Claude, and paste the script as **Message #1**.
 4. **Wait for Confirmation:** The AI will lock into the session rules and reply with:
+5. 
    ```text
    [AVIS HEADER/BODY BUILD ENGINE FORGED | AVIS.REF RESOURCES LOADED]
    ```
