@@ -8,8 +8,8 @@
     </a>
 </div>
 
-### 🗝️ MERCWAR AI.AVIS Studio
-###### 📦 Featured Characters & Lore
+### 📦 MERCWAR AI.AVIS Studio
+###### 🗝️ Featured Characters & Lore
 
 <!--
  * AIFVS-ARTIFACT
@@ -26,7 +26,11 @@
 
 ![ai](images/ai2.png)
 
-Instead of pasting thousands of lines of code into a chat session, this repository gives end users a browser-based **Paste-Programmer Studio** that separates lightweight **Header Contracts (`AIFVS-HEADER`)** from on-demand **Implementation Bodies (`AIFVS-BODY`)**—just like `.h` and `.c` files in standard C.
+####
+
+🗝️ Instead of pasting thousands of lines of code into a chat session
+- Use this repository gives end users a browser-based **Paste-Programmer Studio** 
+- Separates lightweight **Header Contracts (`AIFVS-HEADER`)** from on-demand **Implementation Bodies (`AIFVS-BODY`)**—just like `.h` and `.c` files in standard C.
 
 ---
 
