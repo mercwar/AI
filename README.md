@@ -8,12 +8,10 @@
     </a>
 </div>
 
-
-
 <!--
  * AIFVS-ARTIFACT
  * @id: README-AVIS-STUDIO-001
- * @version: 2.0.0
+ * @version: 2.2.0
  * @nexus_root: NEXUS.ROOT.V3
  * @visibility: PUBLIC_INDEX
  * @description: Complete repository README for the Mercwar AVIS & NEXUS v3 AI Project Setup Studio.
@@ -25,17 +23,15 @@
 
 ![ai](images/ai2.png)
 
-####
-
-🗝️ Instead of pasting thousands of lines of code into a chat session
-- Use this repository gives end users a browser-based **Paste-Programmer Studio** 
+🗝️ **Instead of pasting thousands of lines of code into a chat session:**
+- Gives end users a browser-based **Paste-Programmer Studio**
 - Separates lightweight **Header Contracts (`AIFVS-HEADER`)** from on-demand **Implementation Bodies (`AIFVS-BODY`)**—just like `.h` and `.c` files in standard C.
 
 ---
 
 ## Table of Contents
-1. [Repository Structure](#1-repository-structure)
-2. [How to Run the Studio](#2-how-to-run-the-studio)
+1. [Web Interface & Studio Controls](#1-web-interface--studio-controls)
+2. [Quick Start & Architecture Overview](#2-quick-start--architecture-overview)
 3. [How End Users Forge an AI Chat Session](#3-how-end-users-forge-an-ai-chat-session)
 4. [AI Session Commands Reference](#4-ai-session-commands-reference)
 5. [Adding Custom `.REF` Blueprint Packs](#5-adding-custom-ref-blueprint-packs)
@@ -45,68 +41,49 @@
 
 ![ai](images/ai1.png)
 
+## 1. Web Interface & Studio Controls
 
-## 1. Repository Structure
+The **Mercwar AI.AVIS Studio** interface is organized into a distraction-free, three-step visual pipeline designed to turn high-level project ideas into deterministic AI prompts:
 
-Every file in this repository includes an `AIFVS-ARTIFACT` metadata header at the top so AI agents can index and verify versions deterministically:
-
-```text
-/
-├── index.html                  # Main human-friendly web UI (v1.5.0)
-├── avisLayout.css              # Firegem Ember & Black Glass theme + responsive grid (v2.1.0)
-├── avisComponents.css          # Glass inputs, gradient buttons, dark dropdowns & pills (v2.1.0)
-├── avisEngine.js               # Pure JS kernel generator & AIFVS-HEADER parser (v1.2.0)
-├── avisStudioUI.js             # Server catalog loader, file/folder uploader & UI events (v1.3.0)
-├── README.md                   # Repository documentation
-└── resources/
-    ├── index.json              # Master catalog of server-hosted .ref blueprint packs
-    ├── game-engine/
-    │   └── game-engine.ref     # 2D/retro browser game engine header contracts
-    ├── datalake-nodes/
-    │   └── datalake.ref        # AVIS-DATALAKE JSON node loader & verification contracts
-    └── web-fullstack/
-        └── web-modules.ref     # Client-side state, API client, storage & UI view contracts
-```
+- **Uplink Header & Built-In Interactive Guide:** Displays live navigation uplinks (**Cyborg Station**, **Mercwar GitHub**, and **NEXUS**) alongside a collapsible *"How It Works"* walkthrough explaining why blueprint-first prompting prevents AI memory loss.
+- **Step 1 — Project & AI Role Configuration:** Define your **Project Name**, select a specialized **AI Assistant Persona** (e.g., *2D/Browser Game Developer*, *Full-Stack Web Module Forge*, *Datalake & JSON Node Compiler*, or *CLI Script Builder*), lock in your **Tech Stack**, and restrict the AI to specific **Project Folder Paths**.
+- **Step 2 — Blueprint & Custom Module Manager:** Browse and load pre-built `.ref` starter packs with one click, track active blueprint counts via live status pills, or expand the custom drawer to upload local folders/files and manually author `AIFVS-HEADER` contracts (`File ID`, `File Path`, `Dependencies`, `Exports`, and `Data Schema`).
+- **Step 3 — Live Program Draft & Export Toolbar:** Compiles your configuration and loaded headers into a ready-to-paste initialization kernel with instant actions to **Copy Setup Script to Clipboard**, **Refresh Script**, or export standalone `.txt` and `.REF` files.
 
 ---
 
-## 2. How to Run the Studio
+## 2. Quick Start & Architecture Overview
 
-
-
-Because the Studio dynamically loads `/resources/index.json` and `.ref` packs via `fetch()`, serve the repository over a local or hosted HTTP server:
-
-### Option A: Local Development Server
-Run any static file server from the repository root:
+Clone the repository directly to inspect, customize, or extend the Studio blueprints:
 
 ```bash
-# Using Python 3
-python -m http.server 8080
+git clone [https://github.com/mercwar/AVIS-Studio.git](https://github.com/mercwar/AVIS-Studio.git)
+cd AVIS-Studio
 
-# Or using Node.js
-npx serve .
-
-or from Apache
 ```
-Then open **`http://localhost:8080`** in your browser.
 
-### Option B: Static Web Hosting
-Upload the repository files directly to **GitHub Pages**, **Netlify**, **Cloudflare Pages**, or any standard web host. No build step, database, or backend server is required.
+### Why Header-First AI Architecture Matters
+
+* **Zero-Dependency Vanilla Core:** Built entirely with pure HTML5, modular CSS, and client-side JavaScript—no bundlers, build pipelines, or external frameworks required.
+* **Deterministic Context Control:** By compiling module signatures, dependencies, and schemas into compact `.ref` manifests before generating implementation code, AI sessions stay fast, accurate, and immune to context drift.
+* **Portable Blueprints:** `.ref` manifests can be exported locally, shared across repositories, or pushed directly to the **AVIS-DATALAKE** for cross-session persistence.
 
 ---
-
-![ai](images/ai3.png)
 
 ## 3. How End Users Forge an AI Chat Session
 
+![ai](images/ai2.png)
+
 1. **Describe Your Project (Step 1):** Enter your project name, select an AI assistant specialty, and specify your target tech stack and allowed directory paths.
-2. **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the server dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
+2. **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
 3. **Copy & Paste into AI Chat (Step 3):** Click **Copy Setup Script to Clipboard**, open a brand-new chat window in Gemini, ChatGPT, or Claude, and paste the script as **Message #1**.
 4. **Wait for Confirmation:** The AI will lock into the session rules and reply with:
-5. 
-   ```text
-   [AVIS HEADER/BODY BUILD ENGINE FORGED | AVIS.REF RESOURCES LOADED]
-   ```
+```text
+[AVIS HEADER/BODY BUILD ENGINE FORGED | AVIS.REF RESOURCES LOADED]
+
+```
+
+
 
 ---
 
@@ -115,7 +92,7 @@ Upload the repository files directly to **GitHub Pages**, **Netlify**, **Cloudfl
 Once your AI chat window is forged, control your codebase using short commands:
 
 | Command | Action |
-| :--- | :--- |
+| --- | --- |
 | `/headers <idea>` | Generate or append new compact `AIFVS-HEADER` contracts to `AVIS.REF` without dumping full source code. |
 | `/body <MODULE-ID>` | Compile the complete, production-ready `AIFVS-BODY` source file for a single module using its header and dependency contracts. |
 | `/batch <ID-1, ID-2>` | Compile up to 3 tightly coupled module bodies in one turn. |
@@ -126,29 +103,40 @@ Once your AI chat window is forged, control your codebase using short commands:
 
 ## 5. Adding Custom `.REF` Blueprint Packs
 
-To make new starter blueprints appear in the Studio's server dropdown:
+To make new starter blueprints appear in the Studio's starter dropdown:
 
 1. Create a `.ref` file inside `/resources/<pack-name>/` containing one or more `AIFVS-HEADER` blocks:
-   ```text
-   /*
-    * AIFVS-HEADER
-    * @id: CUSTOM-MOD-001
-    * @path: /src/customModule.js
-    * @version: 1.0.0
-    * @deps: []
-    * @exports: runTask(input) -> Promise<Object>
-    * @schema: { input: "string", ok: "boolean" }
-    */
-   ```
-2. Register the new file inside `resources/index.json`:
-   ```json
-   {
-     "id": "custom-pack",
-     "label": "Custom Module Pack (custom.ref)",
-     "path": "resources/custom-pack/custom.ref"
-   }
-   ```
+```text
+/*
+ * AIFVS-HEADER
+ * @id: CUSTOM-MOD-001
+ * @path: /src/customModule.js
+ * @version: 1.0.0
+ * @deps: []
+ * @exports: runTask(input) -> Promise<Object>
+ * @schema: { input: "string", ok: "boolean" }
+ */
 
+```
+
+
+2. Register the new file inside `resources/index.json`:
+```json
+{
+  "id": "custom-pack",
+  "label": "Custom Module Pack (custom.ref)",
+  "path": "resources/custom-pack/custom.ref"
+}
+
+```
+
+
+
+---
+
+## 6. AVIS-DATALAKE Integration
+
+Click **Save this ref in the AVIS-DATALAKE** in Step 1 of the Studio to open the **AVIS-DATALAKE** portal (`https://cron.iblogger.org/AVIS-DATALAKE`) in a dedicated popup window where you can store and share your `.ref` header registries in datalake records.
 ---
 
 ## 6. AVIS-DATALAKE Integration
