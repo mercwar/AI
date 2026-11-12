@@ -148,3 +148,22 @@ To make new starter blueprints appear in the Studio's server dropdown:
 ## 6. AVIS-DATALAKE Integration
 
 Click **Save this ref in the AVIS-DATALAKE** in Step 3 of the Studio to open the **AVIS-DATALAKE** portal (`https://iblogger.com`) in a dedicated popup window where you can store and share your `.ref` header registries.
+<footer style="margin-top: 32px; padding: 12px 18px; border-radius: 6px; background: rgba(10, 12, 18, 0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); color: #94a3b8; font-family: system-ui, -apple-system, sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.03em; line-height: 1.5;">
+
+#
+    
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px;">
+    <span>
+      &copy; 2026 <strong style="font-weight: 500; color: #e2e8f0;">Mercwar AI.AVIS Studio</strong> &middot; Powered by <a href="https://iblogger.org" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">NEXUS</a>. All rights reserved.
+    </span>
+    <span>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1; text-decoration: none;">GitHub</a>
+      &nbsp;&middot;&nbsp;
+      <span>Open Source / Provided "As-Is" Without Warranty</span>
+    </span>
+  </div>
+    <br>
+  <p style="margin: 6px 0 0 0; font-size: 0.7rem; color: #64748b;">
+    <strong>Disclaimer:</strong> Setup scripts and <code>.ref</code> templates are provided for educational and development purposes. Users are responsible for reviewing generated prompts and verifying outputs when interacting with third-party AI platforms (such as ChatGPT or Gemini).
+  </p>
+</footer>
