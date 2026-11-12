@@ -21,13 +21,25 @@
 
 ###### **Mercwar AVIS** (Autonomous Visual Information Seeking) and **NEXUS v3** provide an "AI-first" architecture for building large multi-file software projects inside standard web AI chat windows (Gemini, ChatGPT, Claude) without hitting token limits or losing track of file connections.
 
-![ai](images/ai2.png)
+<div style="text-align: center; margin-bottom: 24px;">
+    <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
+    <img 
+        src="images/ai2.png" 
+        alt="Mercwar Studio - Free Access" 
+        style="width:100%; height:auto; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.6);"
+    />
+    </a>
+</div>
+
 
 🗝️ **Instead of pasting thousands of lines of code into a chat session:**
 - Gives end users a browser-based **Paste-Programmer Studio**
 - Separates lightweight **Header Contracts (`AIFVS-HEADER`)** from on-demand **Implementation Bodies (`AIFVS-BODY`)**—just like `.h` and `.c` files in standard C.
 
 ---
+
+<div style="text-align: center; margin-bottom: 24px;">  This Uplink:  <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">    AI STUDIO    </a>  <i>FREE</i>
+</div>
 
 ## Table of Contents
 1. [Web Interface & Studio Controls](#1-web-interface--studio-controls)
@@ -39,7 +51,17 @@
 
 ---
 
-![ai](images/ai1.png)
+<div style="text-align: center; margin-bottom: 24px;">
+    <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
+    <img 
+        src="images/ai1.png" 
+        alt="Mercwar Studio - Free Access" 
+        style="width:100%; height:auto; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.6);"
+    />
+    </a>
+</div>
+
+###### *"<i>I am CVBGOD, and I have given it to you</i>!"*
 
 ## 1. Web Interface & Studio Controls
 
@@ -72,7 +94,16 @@ cd AVIS-Studio
 
 ## 3. How End Users Forge an AI Chat Session
 
-![ai](images/ai3.png)
+
+<div style="text-align: center; margin-bottom: 24px;">
+    <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
+    <img 
+        src="images/ai3.png" 
+        alt="Mercwar Studio - Free Access" 
+        style="width:100%; height:auto; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.6);"
+    />
+    </a>
+</div>
 
 1. **Describe Your Project (Step 1):** Enter your project name, select an AI assistant specialty, and specify your target tech stack and allowed directory paths.
 2. **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
