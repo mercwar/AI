@@ -21,7 +21,7 @@
 
 ###### **Mercwar AVIS** (Autonomous Visual Information Seeking) and **NEXUS v3** provide an "AI-first" architecture for building large multi-file software projects inside standard web AI chat windows (Gemini, ChatGPT, Claude) without hitting token limits or losing track of file connections.
 
-![ai](images/ai3.png)
+![ai](images/ai2.png)
 
 🗝️ **Instead of pasting thousands of lines of code into a chat session:**
 - Gives end users a browser-based **Paste-Programmer Studio**
@@ -72,7 +72,7 @@ cd AVIS-Studio
 
 ## 3. How End Users Forge an AI Chat Session
 
-![ai](images/ai2.png)
+![ai](images/ai3.png)
 
 1. **Describe Your Project (Step 1):** Enter your project name, select an AI assistant specialty, and specify your target tech stack and allowed directory paths.
 2. **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
