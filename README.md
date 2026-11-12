@@ -24,6 +24,8 @@
 
 **Mercwar AVIS** (Autonomous Visual Information Seeking) and **NEXUS v3** provide an "AI-first" architecture for building large multi-file software projects inside standard web AI chat windows (Gemini, ChatGPT, Claude) without hitting token limits or losing track of file connections.
 
+![ai](images/ai2.png)
+
 Instead of pasting thousands of lines of code into a chat session, this repository gives end users a browser-based **Paste-Programmer Studio** that separates lightweight **Header Contracts (`AIFVS-HEADER`)** from on-demand **Implementation Bodies (`AIFVS-BODY`)**—just like `.h` and `.c` files in standard C.
 
 ---
@@ -37,6 +39,9 @@ Instead of pasting thousands of lines of code into a chat session, this reposito
 6. [AVIS-DATALAKE Integration](#6-avis-datalake-integration)
 
 ---
+
+![ai](images/ai1.png)
+
 
 ## 1. Repository Structure
 
@@ -64,6 +69,8 @@ Every file in this repository includes an `AIFVS-ARTIFACT` metadata header at th
 
 ## 2. How to Run the Studio
 
+
+
 Because the Studio dynamically loads `/resources/index.json` and `.ref` packs via `fetch()`, serve the repository over a local or hosted HTTP server:
 
 ### Option A: Local Development Server
@@ -82,6 +89,8 @@ Then open **`http://localhost:8080`** in your browser.
 Upload the repository files directly to **GitHub Pages**, **Netlify**, **Cloudflare Pages**, or any standard web host. No build step, database, or backend server is required.
 
 ---
+
+![ai](images/ai3.png)
 
 ## 3. How End Users Forge an AI Chat Session
 
