@@ -20,9 +20,9 @@
  * @description: Complete repository README for the Mercwar AVIS & NEXUS v3 AI Project Setup Studio.
 -->
 
-# Mercwar AVIS & NEXUS v3 — AI Project Setup Studio
+### # Mercwar AVIS & NEXUS v3 — AI Project Setup Studio
 
-**Mercwar AVIS** (Autonomous Visual Information Seeking) and **NEXUS v3** provide an "AI-first" architecture for building large multi-file software projects inside standard web AI chat windows (Gemini, ChatGPT, Claude) without hitting token limits or losing track of file connections.
+#### **Mercwar AVIS** (Autonomous Visual Information Seeking) and **NEXUS v3** provide an "AI-first" architecture for building large multi-file software projects inside standard web AI chat windows (Gemini, ChatGPT, Claude) without hitting token limits or losing track of file connections.
 
 ![ai](images/ai2.png)
 
