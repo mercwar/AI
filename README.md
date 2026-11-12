@@ -99,7 +99,7 @@ cd AVIS-Studio
 <div style="text-align: center; margin-bottom: 24px;">
     <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
     <img 
-        src="images/ai-ss.png" 
+        src="images/ai-ss.jpg" 
         alt="Mercwar Studio - Free Access" 
         style="width:100%; height:auto; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.6);"
     />
