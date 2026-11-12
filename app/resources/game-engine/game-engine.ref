@@ -1,0 +1,48 @@
+/*
+ * AIFVS-ARTIFACT
+ * @id: PACK-GAME-ENGINE-001
+ * @version: 1.0.0
+ * @nexus_root: NEXUS.ROOT.V3
+ * @visibility: PUBLIC_INDEX
+ * @description: Header contracts for a modular browser-based 2D/retro game engine.
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: GAME-LOOP-001
+ * @path: /engine/gameLoop.js
+ * @version: 1.0.0
+ * @deps: []
+ * @exports: startLoop(targetFps, updateFn, renderFn) -> Void, stopLoop() -> Void, getDelta() -> Number
+ * @schema: { targetFps: "number", delta: "number", isRunning: "boolean" }
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: INPUT-MGR-002
+ * @path: /engine/inputManager.js
+ * @version: 1.0.0
+ * @deps: []
+ * @exports: initInput(targetElement) -> Void, isKeyDown(keyCode) -> Boolean, getPointerState() -> Object
+ * @schema: { keys: "object", pointer: { x: "number", y: "number", pressed: "boolean" } }
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: ENTITY-ECS-003
+ * @path: /entities/entityRegistry.js
+ * @version: 1.0.0
+ * @deps: [GAME-LOOP-001]
+ * @exports: createEntity(type, props) -> String, queryEntities(tag) -> Array<Object>, destroyEntity(id) -> Boolean
+ * @schema: { id: "string", type: "string", x: "number", y: "number", components: "object" }
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: CANVAS-GFX-004
+ * @path: /ui/canvasRenderer.js
+ * @version: 1.0.0
+ * @deps: [ENTITY-ECS-003]
+ * @exports: initRenderer(canvasId, width, height) -> CanvasRenderingContext2D, renderScene(entities) -> Void
+ * @schema: { width: "number", height: "number", clearColor: "string" }
+ */

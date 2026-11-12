@@ -1,0 +1,26 @@
+{
+  "$avis_artifact": {
+    "id": "AVIS-RESOURCE-CATALOG-001",
+    "version": "1.0.0",
+    "nexus_root": "NEXUS.ROOT.V3",
+    "visibility": "PUBLIC_INDEX",
+    "description": "Catalog of server-hosted .ref resource packs selectable in Paste-Programmer Studio."
+  },
+  "packs": [
+    {
+      "id": "game-engine",
+      "label": "Game & Simulation Engine (game-engine.ref)",
+      "path": "resources/game-engine/game-engine.ref"
+    },
+    {
+      "id": "datalake-nodes",
+      "label": "AVIS Datalake & JSON Nodes (datalake.ref)",
+      "path": "resources/datalake-nodes/datalake.ref"
+    },
+    {
+      "id": "web-fullstack",
+      "label": "Full-Stack Web Modules (web-modules.ref)",
+      "path": "resources/web-fullstack/web-modules.ref"
+    }
+  ]
+}

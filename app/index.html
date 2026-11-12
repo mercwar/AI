@@ -1,0 +1,176 @@
+<!--
+ * AIFVS-ARTIFACT
+ * @id: AVIS-STUDIO-HTML-001
+ * @version: 1.5.0
+ * @nexus_root: NEXUS.ROOT.V3
+ * @visibility: PUBLIC_INDEX
+ * @deps: [AVIS-LAYOUT-CSS-002A, AVIS-COMPONENTS-CSS-002B, AVIS-STUDIO-ENGINE-003, AVIS-STUDIO-UI-004]
+ * @description: Human-friendly AI Project Setup Studio with AVIS-DATALAKE popup integration and split CSS architecture.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercwar AVIS — AI Project Setup Studio</title>
+  <link rel="stylesheet" href="avisStudio.css?v=1" />
+  <link rel="stylesheet" href="avisStudio1.css?v=1" />
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Mercwar AVIS — AI Project Setup Studio</h1>
+      <p class="hint header-subtitle">
+        Configure a custom setup script to paste into ChatGPT, Gemini, or Claude so the AI builds large projects one file at a time without losing track.
+      </p>
+    </div>
+    <span>NEXUS v3 // READY</span>
+  </header>
+
+  <!-- STEP 1: CHOOSE YOUR AI ASSISTANT SETUP -->
+  <section class="card">
+    <h2>Step 1: Describe Your Project &amp; AI Role</h2>
+    <p class="hint section-lead">
+      Tell the AI what you are building and what kind of developer persona it should adopt.
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <label for="projectName">Project Name</label>
+        <input id="projectName" type="text" value="Mercwar AVIS Workspace" placeholder="e.g. My Retro Space Game" />
+        <span class="hint">The title of your app, game, or website.</span>
+      </div>
+
+      <div>
+        <label for="windowRole">AI Assistant Specialty</label>
+        <select id="windowRole">
+          <option value="AVIS Header/Body Build Engine">General Software &amp; App Builder</option>
+          <option value="Game &amp; Simulation Engine Forge">2D / Browser Game Developer</option>
+          <option value="Full-Stack Web Module Forge">Website &amp; Web App Developer</option>
+          <option value="Datalake &amp; JSON Node Compiler">Data &amp; JSON Pipeline Builder</option>
+          <option value="CLI &amp; Automation Script Forge">Command-Line &amp; Automation Script Builder</option>
+        </select>
+        <span class="hint">Sets the AI's focus and coding style for this chat session.</span>
+      </div>
+
+      <div>
+        <label for="targetStack">Programming Languages &amp; Tools</label>
+        <input id="targetStack" type="text" value="Vanilla JS / HTML5 / JSON" placeholder="e.g. Python, React, HTML/CSS/JS" />
+        <span class="hint">The tech stack you want the AI to write code in.</span>
+      </div>
+
+      <div>
+        <label for="directories">Project Folder Structure</label>
+        <input id="directories" type="text" value="/VERSION 1/, /VERSION 2/, /VERSION 3/, /dl/, /SYMBOLIC/, /GEMINI/" />
+        <span class="hint">Folders the AI is allowed to organize files into.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2: LOAD READY-MADE BLUEPRINTS (.REF PACKS) -->
+  <section class="card">
+    <h2>Step 2: Pick a Starter Blueprint Pack (Optional)</h2>
+    <p class="hint section-lead">
+      Load a pre-built file blueprint from the server so the AI already knows all the files, functions, and connections your project needs.
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <label for="serverPackSelect">Choose a Starter Blueprint</label>
+        <select id="serverPackSelect">
+          <option value="">Loading available blueprints...</option>
+        </select>
+      </div>
+      <div class="btn-row align-end">
+        <button type="button" id="loadServerPackBtn">Add Selected Blueprint</button>
+        <button type="button" id="loadAllServerPacksBtn" class="secondary">Add All Blueprints</button>
+      </div>
+    </div>
+
+    <div id="resourcePackPills" class="pill-list"></div>
+
+    <div class="label-bar status-bar-gap">
+      <span class="hint no-margin">
+        <strong><span id="headerCount">0</span> file blueprints</strong> currently loaded into your AI setup.
+      </span>
+      <button type="button" id="clearHeadersBtn" class="danger small">Remove All</button>
+    </div>
+
+    <details class="manual-drawer">
+      <summary>Inspect, Edit, or Upload Custom Blueprints (Advanced)</summary>
+
+      <div class="btn-row">
+        <button type="button" id="pickFolderBtn" class="secondary small">Upload Folder from Computer</button>
+        <button type="button" id="pickFilesBtn" class="secondary small">Upload .REF or Code Files</button>
+        <input id="folderInput" type="file" webkitdirectory directory multiple hidden />
+        <input id="fileInput" type="file" multiple hidden />
+      </div>
+
+      <div class="grid-3 row-gap">
+        <div>
+          <label for="modId">File ID</label>
+          <input id="modId" type="text" placeholder="e.g. PLAYER-CTRL-001" />
+        </div>
+        <div>
+          <label for="modPath">File Path</label>
+          <input id="modPath" type="text" placeholder="e.g. /engine/player.js" />
+        </div>
+        <div>
+          <label for="modDeps">Depends On (File IDs)</label>
+          <input id="modDeps" type="text" placeholder="e.g. GAME-LOOP-001" />
+        </div>
+      </div>
+
+      <div class="grid-2 row-gap">
+        <div>
+          <label for="modExports">Functions Provided</label>
+          <input id="modExports" type="text" placeholder="e.g. movePlayer(x, y) -> Void" />
+        </div>
+        <div>
+          <label for="modSchema">Data Format</label>
+          <input id="modSchema" type="text" placeholder='e.g. { x: "number", y: "number" }' />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" id="addHeaderBtn" class="secondary small">+ Add File Blueprint</button>
+      </div>
+
+      <div class="row-gap">
+        <label for="initialHeaders">Raw Blueprint Registry (AVIS.REF)</label>
+        <textarea id="initialHeaders" placeholder="Loaded file blueprints appear here..."></textarea>
+      </div>
+    </details>
+  </section>
+
+  <!-- STEP 3: COPY & PASTE INTO AI CHAT -->
+  <section class="card">
+    <h2>Step 3: Copy &amp; Paste Into Your AI Chat Window</h2>
+    <p class="hint section-lead">
+      Open a brand-new chat in your favorite AI tool, paste the script below as your <strong>first message</strong>, and wait for it to confirm it is ready.
+    </p>
+
+    <div class="btn-row toolbar-top">
+      <button type="button" id="copyBtn">Copy Setup Script to Clipboard</button>
+      <button type="button" id="generateBtn" class="secondary">Refresh Script</button>
+      <button type="button" id="downloadKernelBtn" class="secondary">Save as .txt</button>
+      <button type="button" id="downloadRefBtn" class="secondary">Save Blueprint (.REF)</button>
+      <button type="button" id="saveDatalakeBtn" class="datalake" onclick="window.open('https://cron.iblogger.org/AVIS-DATALAKE', 'AVISDatalakePopup', 'width=1024,height=768,resizable=yes,scrollbars=yes')">Save this ref in the AVIS-DATALAKE</button>
+      <span id="status"></span>
+    </div>
+
+    <textarea id="output" readonly></textarea>
+
+    <div class="command-guide hint">
+      <strong>How to talk to the AI after pasting:</strong><br />
+      &bull; Type <code>/headers</code> to have the AI plan out new files for your project.<br />
+      &bull; Type <code>/body FILE-ID</code> (for example, <code>/body GAME-LOOP-001</code>) to generate the full code for one file at a time.<br />
+      &bull; Type <code>/check</code> to make sure all your planned files connect together without errors.
+    </div>
+  </section>
+
+  <script src="avisEngine.js?v=3"></script>
+  <script src="avisStudioUI.js?v=3"></script>
+</body>
+</html>

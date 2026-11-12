@@ -1,0 +1,48 @@
+/*
+ * AIFVS-ARTIFACT
+ * @id: PACK-WEB-FULLSTACK-003
+ * @version: 1.0.0
+ * @nexus_root: NEXUS.ROOT.V3
+ * @visibility: PUBLIC_INDEX
+ * @description: Header contracts for modular client-side state, API transport, storage, and UI view binding.
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: WEB-STORE-001
+ * @path: /VERSION 3/stateStore.js
+ * @version: 1.0.0
+ * @deps: []
+ * @exports: createStore(initialState) -> Object, getState() -> Object, setState(patch) -> Void, subscribe(listener) -> Function
+ * @schema: { state: "object", listeners: "array" }
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: WEB-API-002
+ * @path: /VERSION 3/apiClient.js
+ * @version: 1.0.0
+ * @deps: [WEB-STORE-001]
+ * @exports: requestJson(endpoint, options) -> Promise<Object>, setAuthHeader(token) -> Void
+ * @schema: { status: "number", ok: "boolean", data: "object" }
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: WEB-CACHE-003
+ * @path: /VERSION 3/localVault.js
+ * @version: 1.0.0
+ * @deps: [WEB-STORE-001]
+ * @exports: saveSnapshot(key, data) -> Boolean, loadSnapshot(key, fallback) -> Object, purgeVault(prefix) -> Void
+ * @schema: { key: "string", timestamp: "number", payload: "object" }
+ */
+
+/*
+ * AIFVS-HEADER
+ * @id: WEB-VIEW-004
+ * @path: /VERSION 3/viewBinder.js
+ * @version: 1.0.0
+ * @deps: [WEB-STORE-001, WEB-API-002]
+ * @exports: bindComponent(rootSelector, templateFn) -> Void, renderErrorBanner(message) -> Void
+ * @schema: { rootSelector: "string", rendered: "boolean" }
+ */
