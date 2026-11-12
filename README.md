@@ -8,7 +8,7 @@
     </a>
 </div>
 
-### 🌎 MERCWAR COMICS
+### 🗝️ MERCWAR AI.AVIS Studio
 ###### 📦 Featured Characters & Lore
 
 <!--
