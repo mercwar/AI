@@ -96,21 +96,38 @@ cd AVIS-Studio
 ---
 
 ## 3. 🔥 How End Users Forge an AI Chat Session
-
+<div style="text-align: center; margin-bottom: 24px;">
+    <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
+    <img 
+        src="images/ai-ss.png" 
+        alt="Mercwar Studio - Free Access" 
+        style="width:100%; height:auto; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.6);"
+    />
+    </a>
+</div>
 1. 📝 **Describe Your Project (Step 1):** Enter your project name, select an AI assistant specialty, and specify your target tech stack and allowed directory paths.
 2. 📚 **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
 3. 📋 **Copy & Paste into AI Chat (Step 3):** Click **Copy Setup Script to Clipboard**, open a brand-new chat window in Gemini, ChatGPT, or Claude, and paste the script as **Message #1**.
 4. ✅ **Wait for Confirmation:** The AI will lock into the session rules and reply with:
+
 ```text
 [AVIS HEADER/BODY BUILD ENGINE FORGED | AVIS.REF RESOURCES LOADED]
 
 ```
 
-
-
 ---
 
 ## 4. ⌨️ AI Session Commands Reference
+
+<div style="text-align: center; margin-bottom: 24px;">
+    <a target="_self" title="CLICK HERE to ENTER the Studio FREE!" href="https://mercwar.github.io/AI/index.html">
+    <img 
+        src="images/ai3.png" 
+        alt="Mercwar Studio - Free Access" 
+        style="width:100%; height:auto; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.6);"
+    />
+    </a>
+</div>
 
 Once your AI chat window is forged, control your codebase using short commands:
 
