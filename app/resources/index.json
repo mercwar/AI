@@ -10,17 +10,17 @@
     {
       "id": "game-engine",
       "label": "Game & Simulation Engine (game-engine.ref)",
-      "path": "resources/game-engine/game-engine.ref"
+      "path": "app/resources/game-engine/game-engine.ref"
     },
     {
       "id": "datalake-nodes",
       "label": "AVIS Datalake & JSON Nodes (datalake.ref)",
-      "path": "resources/datalake-nodes/datalake.ref"
+      "path": "app/resources/datalake-nodes/datalake.ref"
     },
     {
       "id": "web-fullstack",
       "label": "Full-Stack Web Modules (web-modules.ref)",
-      "path": "resources/web-fullstack/web-modules.ref"
+      "path": "app/resources/web-fullstack/web-modules.ref"
     }
   ]
 }

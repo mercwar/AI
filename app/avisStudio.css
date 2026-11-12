@@ -1,10 +1,10 @@
 /*
  * AIFVS-ARTIFACT
- * @id: AVIS-LAYOUT-CSS-002A
- * @version: 2.1.0
+ * @id: AVIS-THEME-CSS-002A
+ * @version: 1.0.0
  * @nexus_root: NEXUS.ROOT.V3
  * @visibility: PUBLIC_INDEX
- * @description: Muted Firegem Ember and deep Black Glass theme with layered gradients and low-glare contrast.
+ * @description: Muted Firegem Ember and deep Black Glass CSS variables, ai.png background vignette, and dark scrollbars.
  */
 
 :root {
@@ -32,9 +32,11 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background-color: var(--bg-void);
   background-image:
-    radial-gradient(circle at 15% 8%, rgba(194, 73, 20, 0.11), transparent 45%),
-    radial-gradient(circle at 88% 92%, rgba(140, 45, 8, 0.09), transparent 48%),
-    linear-gradient(165deg, #09080b 0%, #050507 52%, #020203 100%);
+    linear-gradient(180deg, rgba(4, 4, 6, 0.12) 0%, rgba(4, 4, 6, 0.85) 100%),
+    url("ai.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text);
   max-width: 1020px;
@@ -43,92 +45,48 @@ body {
   line-height: 1.45;
 }
 
-header {
-  border-bottom: 1px solid var(--glass-border);
-  padding-bottom: 0.95rem;
-  margin-bottom: 1.35rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* Custom Obsidian & Ember Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-header h1 {
-  font-size: 1.38rem;
-  margin: 0;
-  background: linear-gradient(95deg, #e8e2dc 0%, #d4a373 50%, var(--firegem-soft) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+::-webkit-scrollbar-track {
+  background: rgba(5, 5, 7, 0.85);
 }
 
-header span {
-  font-size: 0.8rem;
-  color: var(--firegem-soft);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  letter-spacing: 0.06em;
-  opacity: 0.9;
+::-webkit-scrollbar-thumb {
+  background: rgba(194, 73, 20, 0.4);
+  border-radius: 4px;
 }
 
-.header-subtitle {
-  margin: 0.25rem 0 0;
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 107, 39, 0.65);
+}
+.header-steps {
+  display: block;
+  width: 100%;
+  margin: 0.35rem 0 0;
+  padding: 0.65rem 0.9rem 0.65rem 2.1rem;
+  text-align: left;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: linear-gradient(90deg, rgba(194, 73, 20, 0.14) 0%, rgba(10, 10, 14, 0.65) 100%);
+  border: 1px solid var(--glass-border-subtle);
+  border-left: 3px solid var(--firegem);
+  border-radius: 8px;
 }
 
-.card {
-  background: linear-gradient(180deg, var(--glass-panel-top) 0%, var(--glass-panel-bottom) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
-  border-top: 1px solid rgba(217, 107, 39, 0.28);
-  border-radius: 12px;
-  padding: 1.1rem 1.25rem;
-  margin-bottom: 1.25rem;
-  box-shadow:
-    0 14px 36px rgba(0, 0, 0, 0.82),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+.header-steps li {
+  margin-bottom: 0.2rem;
 }
 
-.card h2 {
-  font-size: 1.02rem;
-  margin: 0 0 0.85rem;
-  color: #ebe6e0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header-steps li:last-child {
+  margin-bottom: 0;
 }
 
-.section-lead {
-  margin-top: -0.4rem;
-  margin-bottom: 0.9rem;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.75rem;
-}
-
-.row-gap {
-  margin-top: 0.85rem;
-}
-
-.status-bar-gap {
-  margin-top: 0.85rem;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-@media (max-width: 720px) {
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
+.header-steps li::marker {
+  color: var(--firegem-ember);
+  font-weight: 700;
 }

@@ -13,23 +13,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mercwar AVIS — AI Project Setup Studio</title>
-  <link rel="stylesheet" href="avisStudio.css?v=1" />
-  <link rel="stylesheet" href="avisStudio1.css?v=1" />
+  <link rel="stylesheet" href="app/avisStudio.css?v=4" />
+  <link rel="stylesheet" href="app/avisStudio1.css?v=4" />
+  <link rel="stylesheet" href="app/avisStudio2.css?v=4" />
 </head>
 <body>
 
-  <header>
-    <div>
-      <h1>Mercwar AVIS — AI Project Setup Studio</h1>
-      <p class="hint header-subtitle">
-        Configure a custom setup script to paste into ChatGPT, Gemini, or Claude so the AI builds large projects one file at a time without losing track.
+<header>
+<header>
+  <div class="header-top-row">
+    <h1>Mercwar AI.AVIS Studio</h1>
+
+    <div class="header-uplinks">
+      <span class="uplink-item">
+        This Uplink:
+        <a href="https://github.com/mercwar" target="_blank" rel="noopener noreferrer" class="mercwar-title-link" title="Visit Mercwar on GitHub">Mercwar GitHub</a>
+      </span>
+      <span class="uplink-item">
+        Powered by:
+        <a href="https://cron.iblogger.org/NEXUS" target="_blank" rel="noopener noreferrer" class="mercwar-title-link" title="Visit NEXUS Portal">NEXUS</a>
+      </span>
+    </div>
+  </div>
+
+<ol class="header-steps">
+  <li><strong>Create your Topic:</strong> Enter a project name and choose an AI specialty in Step 1.</li>
+  <li><strong>Add a Program:</strong> Select a ready-made <code>.ref</code> file layout starter pack.</li>
+  <li><strong>Copy &amp; Paste into AI:</strong> Click <strong>Copy Setup Script to Clipboard</strong>  and paste it as your first message in a new (ChatGPT, Gemini,..) chat window.</li>
+<li><strong>Start Building:</strong> After the AI replies "Ready," tell it what you want to build—or type (example.<code>/body GAME-LOOP-001</code> )to have itaccess a  specific file from your program.</li>
+
+</ol>
+
+</header>
+
+<!--
+ * AIFVS-ARTIFACT
+ * @id: AVIS-HELP-SECTION-006
+ * @version: 1.0.0
+ * @nexus_root: NEXUS.ROOT.V3
+ * @visibility: PUBLIC_INDEX
+ * @description: Interactive HTML help guide explaining the reasoning and behind-the-scenes flow between each setup step.
+-->
+<details class="help-guide">
+  <summary>How It Works: Why These 4 Steps Make the AI Smarter (Click to Expand Guide)</summary>
+
+  <div class="help-body">
+    <p class="help-intro">
+      <strong>The Problem with Normal AI Chats:</strong> When you ask a standard AI chat window to build a large app or game all at once, it runs out of memory, forgets earlier files, and breaks connections between scripts. <strong>Mercwar AVIS</strong> solves this by giving the AI a lightweight table of contents first, then building one file at a time.
+    </p>
+
+    <div class="help-step-block">
+      <h3>1. Why You "Create Your Topic" First</h3>
+      <p>
+        <strong>What happens:</strong> Your project name, specialty, and folder list lock the AI into a specific developer role before it writes a single line of code.
+      </p>
+      <p>
+        <strong>Why it matters:</strong> Instead of guessing what programming language or folder layout you prefer, the AI follows strict rules for where every file lives—preventing messy, unorganized code.
       </p>
     </div>
-    <span>NEXUS v3 // READY</span>
-  </header>
+
+    <div class="help-step-block">
+      <h3>2. Why You "Add a Program" (<code>.ref</code> Blueprint Pack)</h3>
+      <p>
+        <strong>What happens:</strong> A <code>.ref</code> file is like a master blueprint or shipping manifest. It lists every file's ID, path, and function names—without loading thousands of lines of heavy source code.
+      </p>
+      <p>
+        <strong>Why it matters:</strong> Because the blueprint is tiny, the AI keeps the entire project map in its active memory without slowing down or hitting word limits.
+      </p>
+    </div>
+
+    <div class="help-step-block">
+      <h3>3. Why You Paste the Script into a Brand-New Chat Window</h3>
+      <p>
+        <strong>What happens:</strong> Pasting the setup script as Message #1 programs the chat window with AVIS rules and loads your blueprint into the AI's working memory.
+      </p>
+      <p>
+        <strong>Why it matters:</strong> Starting in a fresh chat prevents old conversations from confusing the AI. Waiting for the AI to reply <em>"Ready"</em> confirms that it has read and locked in your blueprint.
+      </p>
+    </div>
+
+    <div class="help-step-block">
+      <h3>4. Why You Build One File at a Time (<code>/body</code>)</h3>
+      <p>
+        <strong>What happens:</strong> When you type a command like <code>/body GAME-LOOP-001</code>, the AI looks up that exact file in your blueprint, checks which other files depend on it, and writes complete, ready-to-save code for just that file.
+      </p>
+      <p>
+        <strong>Why it matters:</strong> Every file is guaranteed to match the rest of your project, and you never get cut-off responses or half-finished code blocks.
+      </p>
+    </div>
+  </div>
+</details>
+
 
   <!-- STEP 1: CHOOSE YOUR AI ASSISTANT SETUP -->
   <section class="card">
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 0.65rem;">   <button type="button" id="saveDatalakeBtn" class="datalake" onclick="window.open('https://cron.iblogger.org/AVIS-DATALAKE', 'AVISDatalakePopup', 'width=1024,height=768,resizable=yes,scrollbars=yes')">Save this ref in the AVIS-DATALAKE</button>
+ </div>
     <h2>Step 1: Describe Your Project &amp; AI Role</h2>
     <p class="hint section-lead">
       Tell the AI what you are building and what kind of developer persona it should adopt.
@@ -72,19 +151,19 @@
   <section class="card">
     <h2>Step 2: Pick a Starter Blueprint Pack (Optional)</h2>
     <p class="hint section-lead">
-      Load a pre-built file blueprint from the server so the AI already knows all the files, functions, and connections your project needs.
+      Load a pre-built file Programs from the server so the AI already knows all the files, functions, and connections your project needs.
     </p>
 
     <div class="grid-2">
       <div>
-        <label for="serverPackSelect">Choose a Starter Blueprint</label>
+        <label for="serverPackSelect">Choose a Starter Program</label>
         <select id="serverPackSelect">
-          <option value="">Loading available blueprints...</option>
+          <option value="">Loading available Programs...</option>
         </select>
       </div>
       <div class="btn-row align-end">
-        <button type="button" id="loadServerPackBtn">Add Selected Blueprint</button>
-        <button type="button" id="loadAllServerPacksBtn" class="secondary">Add All Blueprints</button>
+        <button type="button" id="loadServerPackBtn">Add Selected Programs</button>
+        <button type="button" id="loadAllServerPacksBtn" class="secondary">Add All Programs</button>
       </div>
     </div>
 
@@ -98,11 +177,11 @@
     </div>
 
     <details class="manual-drawer">
-      <summary>Inspect, Edit, or Upload Custom Blueprints (Advanced)</summary>
+      <summary>Inspect, Edit, or Upload Custom Programs</summary>
 
       <div class="btn-row">
         <button type="button" id="pickFolderBtn" class="secondary small">Upload Folder from Computer</button>
-        <button type="button" id="pickFilesBtn" class="secondary small">Upload .REF or Code Files</button>
+        <button type="button" id="pickFilesBtn" class="secondary small">Upload .REF or SOURCE</button>
         <input id="folderInput" type="file" webkitdirectory directory multiple hidden />
         <input id="fileInput" type="file" multiple hidden />
       </div>
@@ -134,11 +213,11 @@
       </div>
 
       <div class="btn-row">
-        <button type="button" id="addHeaderBtn" class="secondary small">+ Add File Blueprint</button>
+        <button type="button" id="addHeaderBtn" class="secondary small">+ Add to draft</button>
       </div>
 
       <div class="row-gap">
-        <label for="initialHeaders">Raw Blueprint Registry (AVIS.REF)</label>
+        <label for="initialHeaders">Raw Programs Registry (AVIS.REF)</label>
         <textarea id="initialHeaders" placeholder="Loaded file blueprints appear here..."></textarea>
       </div>
     </details>
@@ -146,7 +225,8 @@
 
   <!-- STEP 3: COPY & PASTE INTO AI CHAT -->
   <section class="card">
-    <h2>Step 3: Copy &amp; Paste Into Your AI Chat Window</h2>
+  <h1><font color="#cbdc19">Program Draft</font></h1>
+    <h2>Step 3: Copy &amp; Paste this Into Your AI Chat Window</h2>
     <p class="hint section-lead">
       Open a brand-new chat in your favorite AI tool, paste the script below as your <strong>first message</strong>, and wait for it to confirm it is ready.
     </p>
@@ -156,8 +236,7 @@
       <button type="button" id="generateBtn" class="secondary">Refresh Script</button>
       <button type="button" id="downloadKernelBtn" class="secondary">Save as .txt</button>
       <button type="button" id="downloadRefBtn" class="secondary">Save Blueprint (.REF)</button>
-      <button type="button" id="saveDatalakeBtn" class="datalake" onclick="window.open('https://cron.iblogger.org/AVIS-DATALAKE', 'AVISDatalakePopup', 'width=1024,height=768,resizable=yes,scrollbars=yes')">Save this ref in the AVIS-DATALAKE</button>
-      <span id="status"></span>
+        <span id="status"></span>
     </div>
 
     <textarea id="output" readonly></textarea>
@@ -170,7 +249,8 @@
     </div>
   </section>
 
-  <script src="avisEngine.js?v=3"></script>
-  <script src="avisStudioUI.js?v=3"></script>
+  <script src="app/avisEngine.js?v=6"></script>
+  <script src="app/avisStudioUI.js?v=6"></script>
+ 
 </body>
 </html>

@@ -388,3 +388,4 @@ bindEvent(id, "input", buildPrompt);
 });
 buildPrompt();
 });
+

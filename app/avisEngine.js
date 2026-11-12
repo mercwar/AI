@@ -149,3 +149,95 @@ if (typeof module !== "undefined" && module.exports) {
     extractHeadersFromFile
   };
 }
+/*
+ * AIFVS-ARTIFACT
+ * @id: AVIS-DHTML-HEADER-005
+ * @version: 1.1.0
+ * @nexus_root: NEXUS.ROOT.V3
+ * @visibility: PUBLIC_INDEX
+ * @description: DHTML per-character Firegem Ember and Molten Gold color wave animator for the Mercwar header link.
+ */
+
+(function initMercwarDhtmlHeader() {
+  function mount() {
+    const link = document.getElementById("mercwarDhtmlLink");
+    if (!link) return;
+
+    const rawText = link.textContent.trim();
+    link.textContent = "";
+
+    // Enforce zero underlines and clean inline layout
+    link.style.setProperty("text-decoration", "none", "important");
+    link.style.setProperty("border-bottom", "none", "important");
+    link.style.setProperty("-webkit-text-fill-color", "initial", "important");
+    link.style.display = "inline-block";
+    link.style.fontWeight = "700";
+    link.style.cursor = "pointer";
+
+    // Low-glare Firegem palette: Warm Ivory -> Amber Gold -> Copper -> Molten Firegem
+    const firegemPalette = [
+      { hex: "#f0e6dc", glow: "rgba(240, 230, 220, 0.12)" },
+      { hex: "#e8b878", glow: "rgba(232, 184, 120, 0.25)" },
+      { hex: "#e07a2b", glow: "rgba(224, 122, 43, 0.40)" },
+      { hex: "#ff5e00", glow: "rgba(255, 94, 0, 0.65)" },
+      { hex: "#c24914", glow: "rgba(194, 73, 20, 0.45)" },
+      { hex: "#e07a2b", glow: "rgba(224, 122, 43, 0.35)" },
+      { hex: "#e8b878", glow: "rgba(232, 184, 120, 0.20)" }
+    ];
+
+    const chars = [];
+    for (let i = 0; i < rawText.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = rawText[i] === " " ? "\u00A0" : rawText[i];
+      span.style.display = "inline-block";
+      span.style.setProperty("text-decoration", "none", "important");
+      span.style.setProperty("border-bottom", "none", "important");
+      span.style.willChange = "transform, color, text-shadow";
+      link.appendChild(span);
+      chars.push(span);
+    }
+
+    let phase = 0;
+    let isHovered = false;
+
+    link.addEventListener("mouseenter", () => {
+      isHovered = true;
+    });
+
+    link.addEventListener("mouseleave", () => {
+      isHovered = false;
+    });
+
+    function tick() {
+      phase += isHovered ? 0.13 : 0.04;
+
+      for (let i = 0; i < chars.length; i++) {
+        const wave = Math.sin(phase - i * 0.26);
+        const normalized = (wave + 1) * 0.5; // 0.0 to 1.0
+        const colorIndex = Math.min(
+          firegemPalette.length - 1,
+          Math.floor(normalized * firegemPalette.length)
+        );
+
+        const tone = firegemPalette[colorIndex];
+        const liftY = isHovered ? wave * 2.4 : wave * 0.85;
+        const blurRadius = isHovered ? 4 + normalized * 10 : normalized * 6;
+
+        chars[i].style.transform = `translateY(${liftY.toFixed(2)}px)`;
+        chars[i].style.setProperty("color", tone.hex, "important");
+        chars[i].style.setProperty("-webkit-text-fill-color", tone.hex, "important");
+        chars[i].style.textShadow = `0 0 ${blurRadius.toFixed(1)}px ${tone.glow}`;
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", mount);
+  } else {
+    mount();
+  }
+})();

@@ -83,7 +83,7 @@ async function initServerCatalog() {
   if (!selectEl) return;
 
   try {
-    const response = await fetch("resources/index.json?v=" + Date.now());
+    const response = await fetch("app/resources/index.json?v=" + Date.now());
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     serverCatalog = Array.isArray(data.packs) ? data.packs : [];
@@ -288,4 +288,121 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   buildPrompt();
+});
+/*
+ * AIFVS-ARTIFACT
+ * @id: AVIS-DHTML-HEADER-005
+ * @version: 1.4.0
+ * @nexus_root: NEXUS.ROOT.V3
+ * @visibility: PUBLIC_INDEX
+ * @description: Hover-only DHTML Firegem color wave animator supporting multiple header links without underlines.
+ */
+
+window.addEventListener("load", function () {
+  var links = document.querySelectorAll("header .mercwar-title-link, header h1 a");
+  if (!links || links.length === 0) return;
+
+  var palette = [
+    { color: "#f5ebe0", glow: "rgba(245, 235, 224, 0.25)" },
+    { color: "#ffb703", glow: "rgba(255, 183, 3, 0.50)" },
+    { color: "#fb8500", glow: "rgba(251, 133, 0, 0.60)" },
+    { color: "#ff5400", glow: "rgba(255, 84, 0, 0.80)" },
+    { color: "#d9480f", glow: "rgba(217, 72, 15, 0.60)" },
+    { color: "#ffb703", glow: "rgba(255, 183, 3, 0.45)" }
+  ];
+
+  function attachDhtmlWave(link) {
+    var text = link.textContent.trim();
+    if (!text) return;
+
+    link.textContent = "";
+    link.style.setProperty("text-decoration", "none", "important");
+    link.style.setProperty("border-bottom", "none", "important");
+    link.style.setProperty("-webkit-text-fill-color", "initial", "important");
+    link.style.display = "inline-block";
+    link.style.fontWeight = "700";
+    link.style.cursor = "pointer";
+
+    var spans = [];
+    for (var i = 0; i < text.length; i++) {
+      var ch = text.charAt(i);
+      var span = document.createElement("span");
+      span.textContent = ch === " " ? "\u00A0" : ch;
+      span.style.display = "inline-block";
+      span.style.setProperty("text-decoration", "none", "important");
+      span.style.setProperty("border-bottom", "none", "important");
+      link.appendChild(span);
+      spans.push(span);
+    }
+
+    function applyRestingColors() {
+      for (var i = 0; i < spans.length; i++) {
+        var ratio = spans.length > 1 ? i / (spans.length - 1) : 0;
+        var idx = Math.min(palette.length - 1, Math.floor(ratio * palette.length));
+        var entry = palette[idx];
+
+        spans[i].style.transform = "translateY(0px)";
+        spans[i].style.setProperty("color", entry.color, "important");
+        spans[i].style.setProperty("-webkit-text-fill-color", entry.color, "important");
+        spans[i].style.textShadow = "0 0 4px " + entry.glow;
+      }
+    }
+
+    var phase = 0;
+    var hovered = false;
+    var animId = null;
+
+    function animate() {
+      if (!hovered) {
+        animId = null;
+        return;
+      }
+
+      phase += 0.14;
+
+      for (var i = 0; i < spans.length; i++) {
+        var wave = Math.sin(phase - i * 0.25);
+        var norm = (wave + 1) * 0.5;
+        var idx = Math.min(palette.length - 1, Math.floor(norm * palette.length));
+        var entry = palette[idx];
+        var y = wave * 2.2;
+        var blur = 6 + norm * 10;
+
+        spans[i].style.transform = "translateY(" + y.toFixed(2) + "px)";
+        spans[i].style.setProperty("color", entry.color, "important");
+        spans[i].style.setProperty("-webkit-text-fill-color", entry.color, "important");
+        spans[i].style.textShadow = "0 0 " + blur.toFixed(1) + "px " + entry.glow;
+      }
+
+      animId = requestAnimationFrame(animate);
+    }
+
+    link.addEventListener("mouseenter", function () {
+      hovered = true;
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].style.transition = "none";
+      }
+      if (!animId) {
+        animId = requestAnimationFrame(animate);
+      }
+    });
+
+    link.addEventListener("mouseleave", function () {
+      hovered = false;
+      if (animId) {
+        cancelAnimationFrame(animId);
+        animId = null;
+      }
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].style.transition = "transform 0.25s ease, color 0.25s ease, text-shadow 0.25s ease";
+      }
+      applyRestingColors();
+    });
+
+    applyRestingColors();
+  }
+
+  for (var j = 0; j < links.length; j++) {
+    attachDhtmlWave(links[j]);
+  }
 });
