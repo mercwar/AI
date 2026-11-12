@@ -54,4 +54,5 @@ jobs:
             git push origin main
             echo "wm_macro_ack: XML dispatched to Audit Surface."
           else
-            echo "AVIS: No structural shifts detected
+            echo "AVIS: No structural shifts detected. Pulse steady."
+          fi
