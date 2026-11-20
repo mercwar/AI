@@ -25,6 +25,9 @@
     <loc>https://github.com/mercwar/AI/blob/main/images/ai-ss.jpg</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/AI/blob/main/.gitmodules</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/AI/blob/main/google77a4b19e8f99751c.html</loc>
   </url>
   <url>
@@ -35,9 +38,6 @@
   </url>
   <url>
     <loc>https://github.com/mercwar/AI/blob/main/fire-site.sh</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/AI/blob/main/AVIS-DATALAKE.md</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/AI/blob/main/app/avisEngine.js</loc>
