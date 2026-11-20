@@ -19,10 +19,16 @@
     <loc>https://github.com/mercwar/AI/blob/main/images/ai-ss.jpg</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/AI/blob/main/_config.yml</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/AI/blob/main/index.html</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/AI/blob/main/sitemap.xml</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/AI/blob/main/.gitmodules</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/AI/blob/main/README.md</loc>
