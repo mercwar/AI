@@ -181,3 +181,11 @@ To make new starter blueprints appear in the Studio's starter dropdown:
 ## 6. 🗄️ AVIS-DATALAKE Integration
 
 ☁️ Click **Save this ref in the AVIS-DATALAKE** in Step 1 of the Studio to open the **AVIS-DATALAKE** portal (`https://cron.iblogger.org/AVIS-DATALAKE`) in a dedicated popup window where you can store and share your `.ref` header registries in datalake records.
+
+##### 📜 AI and repositories
+
+```
+© 2026 CVBGOD Systems / MERCWAR Integration Team
+All Rights Reserved.
+Unauthorized use, duplication, or distribution is strictly prohibited.
+```
