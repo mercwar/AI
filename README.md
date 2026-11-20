@@ -70,10 +70,13 @@
 
 The **Mercwar AI.AVIS Studio** interface is organized into a distraction-free, three-step visual pipeline designed to turn high-level project ideas into deterministic AI prompts:
 
-- 🔗 **Uplink Header & Built-In Interactive Guide:** Displays live navigation uplinks (**Cyborg Station**, **Mercwar GitHub**, and **NEXUS**) alongside a collapsible *"How It Works"* walkthrough explaining why blueprint-first prompting prevents AI memory loss.
-- 🎯 **Step 1 — Project & AI Role Configuration:** Define your **Project Name**, select a specialized **AI Assistant Persona** (e.g., *2D/Browser Game Developer*, *Full-Stack Web Module Forge*, *Datalake & JSON Node Compiler*, or *CLI Script Builder*), lock in your **Tech Stack**, and restrict the AI to specific **Project Folder Paths**.
-- 📦 **Step 2 — Blueprint & Custom Module Manager:** Browse and load pre-built `.ref` starter packs with one click, track active blueprint counts via live status pills, or expand the custom drawer to upload local folders/files and manually author `AIFVS-HEADER` contracts (`File ID`, `File Path`, `Dependencies`, `Exports`, and `Data Schema`).
-- 🚀 **Step 3 — Live Program Draft & Export Toolbar:** Compiles your configuration and loaded headers into a ready-to-paste initialization kernel with instant actions to **Copy Setup Script to Clipboard**, **Refresh Script**, or export standalone `.txt` and `.REF` files.
+- 🔗 *Uplink Header & Built-In Interactive Guide:* Displays live navigation uplinks (*Cyborg Station*, *Mercwar GitHub*, and *NEXUS*) alongside a collapsible *"How It Works"* walkthrough explaining why blueprint-first prompting prevents AI memory loss.
+  
+- 🎯 *Step 1 — Project & AI Role Configuration:* Define your **Project Name**, select a specialized *AI Assistant Persona* (e.g., *2D/Browser Game Developer*, *Full-Stack Web Module Forge*, *Datalake & JSON Node Compiler*, or *CLI Script Builder*), lock in your *Tech Stack*, and restrict the AI to specific *Project Folder Paths*.
+  
+- 📦 *Step 2 — Blueprint & Custom Module Manager:* Browse and load pre-built `.ref` starter packs with one click, track active blueprint counts via live status pills, or expand the custom drawer to upload local folders/files and manually author `AIFVS-HEADER` contracts (`File ID`, `File Path`, `Dependencies`, `Exports`, and `Data Schema`).
+  
+- 🚀 *Step 3 — Live Program Draft & Export Toolbar:* Compiles your configuration and loaded headers into a ready-to-paste initialization kernel with instant actions to *Copy Setup Script to Clipboard*, *Refresh Script*, or export standalone `.txt` and `.REF` files.
 
 ---
 
@@ -105,10 +108,11 @@ cd AVIS-Studio
     />
     </a>
 </div>
-1. 📝 **Describe Your Project (Step 1):** Enter your project name, select an AI assistant specialty, and specify your target tech stack and allowed directory paths.
-2. 📚 **Pick a Starter Blueprint Pack (Step 2):** Select a `.ref` pack from the dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
-3. 📋 **Copy & Paste into AI Chat (Step 3):** Click **Copy Setup Script to Clipboard**, open a brand-new chat window in Gemini, ChatGPT, or Claude, and paste the script as **Message #1**.
-4. ✅ **Wait for Confirmation:** The AI will lock into the session rules and reply with:
+
+1. 📝 *Describe Your Project (Step 1):* Enter your project name, select an AI assistant specialty, and specify your target tech stack and allowed directory paths.
+2. 📚 *Pick a Starter Blueprint Pack (Step 2):* Select a `.ref` pack from the dropdown (or upload a local `.ref` / code folder) so the AI knows all module IDs, file paths, dependencies, and function signatures upfront.
+3. 📋 *Copy & Paste into AI Chat (Step 3):* Click *Copy Setup Script to Clipboard*, open a brand-new chat window in Gemini, ChatGPT, or Claude, and paste the script as *Message #1*.
+4. ✅ *Wait for Confirmation:* The AI will lock into the session rules and reply with:
 
 ```text
 [AVIS HEADER/BODY BUILD ENGINE FORGED | AVIS.REF RESOURCES LOADED]
