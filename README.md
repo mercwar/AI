@@ -186,6 +186,6 @@ To make new starter blueprints appear in the Studio's starter dropdown:
 
 
 #### *© 2026 CVBGOD Systems / MERCWAR Integration Team*
-#####All Rights Reserved.
-######Unauthorized use, duplication, or distribution is strictly prohibited.
+##### All Rights Reserved.
+###### Unauthorized use, duplication, or distribution is strictly prohibited.
 
